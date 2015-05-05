@@ -15,11 +15,11 @@ mysql> SELECT unserialize_php('O:8:"stdClass":2:{s:1:"a";s:5:"hello";s:1:"b";s:5
 | hello                                                                                     |
 +-------------------------------------------------------------------------------------------+
 1 row in set (0.01 sec)
-mysql> SELECT unserialize_php('a:2:{i:1;s:5:"hello";i:2;s:5:"world";}', '$obj[1]');
+mysql> SELECT unserialize_php('a:2:{i:1;s:5:"hello";i:2;s:5:"world";}', '$obj[2]');
 +----------------------------------------------------------------------+
-| unserialize_php('a:2:{i:1;s:5:"hello";i:2;s:5:"world";}', '$obj[1]') |
+| unserialize_php('a:2:{i:1;s:5:"hello";i:2;s:5:"world";}', '$obj[2]') |
 +----------------------------------------------------------------------+
-| hello                                                                |
+| world                                                                |
 +----------------------------------------------------------------------+
 1 row in set (0.02 sec)
 mysql> drop function unserialize_php;
