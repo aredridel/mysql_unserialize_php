@@ -1,3 +1,5 @@
+-- install --
+
 apt-get install php5-dev libphp5-embed
 cd /tmp/
 wget https://github.com/Massivesoft/mysql_unserialize_php/archive/master.zip
