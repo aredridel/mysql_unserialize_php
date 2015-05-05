@@ -1,3 +1,12 @@
+apt-get install php5-dev libphp5-embed
+cd /tmp/
+wget https://github.com/Massivesoft/mysql_unserialize_php/archive/master.zip
+unzip master.zip
+cd mysql_unserialize_php-master/
+make
+cp unserialize_php.so /usr/lib/mysql/plugin/unserialize_php.so
+
+-- example --
 mysql> CREATE FUNCTION unserialize_php RETURNS STRING SONAME 'unserialize_php.so';
 mysql> select unserialize_php('O:8:"stdClass":2:{s:1:"a";s:4:"aaaa";s:1:"b";s:4:"bbbb";}', "$obj->a");
 +-----------------------------------------------------------------------------------------+
