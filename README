@@ -1,4 +1,7 @@
--- install --
+-- install (debian based OSs) --
+
+TODO: update installation instructions for latest debian packages and PHP 7
+in the meantime the below works on debian-based OSs running php5.
 
 apt-get install php5-dev libphp5-embed
 cd /tmp/
