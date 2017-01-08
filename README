@@ -5,7 +5,7 @@ in the meantime the below works on debian-based OSs running php5.
 
 apt-get install php5-dev libphp5-embed
 cd /tmp/
-wget https://github.com/Massivesoft/mysql_unserialize_php/archive/master.zip
+wget https://github.com/sebastian-king/mysql_unserialize_php/archive/master.zip
 unzip master.zip
 cd mysql_unserialize_php-master/
 make
