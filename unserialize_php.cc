@@ -66,6 +66,13 @@ char *unserialize_php(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned l
 	const char* argv[] = {""};
 	std::string *value = (std::string*)initid->ptr;
 
+	if (!args->args[0] ||
+			!args->args[1])
+	{
+		*is_null = 1;
+		return 0;
+	}
+
 	PHP_EMBED_START_BLOCK(0, (char**)argv);
 	pfc_set_string(
 			UNSERIALIZE_PHP_TARGET_STRING,
