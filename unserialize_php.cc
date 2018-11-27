@@ -9,7 +9,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-#include <php_embed.h>
+#include <sapi/embed/php_embed.h>
 #include "pfc.h"
 
 #define DEBUG
